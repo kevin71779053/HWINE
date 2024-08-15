@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 계산기</title>
+</head>
+<body>
+    <h1>HWINE 제조부터 오늘까지 지난 일수:</h1>
+    <p id="days"></p>
+
+    <p>더 많은 정보를 보려면 <a href="https://www.example.com" target="_blank">여기를 클릭하세요</a>.</p>
+
+    <script>
+        function calculateDays() {
+            const startDate = new Date("2024-03-30");
+            const today = new Date();
+            const timeDifference = today - startDate;
+            const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            return daysPassed;
+        }
+
+        document.getElementById("days").innerText = calculateDays() + "일";
+    </script>
+</body>
+</html>
